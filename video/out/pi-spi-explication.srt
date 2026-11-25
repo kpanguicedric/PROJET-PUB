@@ -1,0 +1,332 @@
+1
+00:00:00,600 --> 00:00:03,553
+Vous êtes sur Wave, et votre ami est sur Orange Money ?
+
+2
+00:00:03,853 --> 00:00:07,818
+Vous voulez payer un commerçant, mais il n'a pas le même opérateur que vous ?
+
+3
+00:00:08,118 --> 00:00:12,286
+Ou vous voulez envoyer de l'argent de votre banque vers un compte mobile money ?
+
+4
+00:00:12,585 --> 00:00:16,327
+Bonne nouvelle : tout ça devient simple et rapide, grâce à PI-SPI.
+
+5
+00:00:16,627 --> 00:00:18,782
+En quelques minutes, on vous explique tout.
+
+6
+00:00:20,132 --> 00:00:23,806
+Avant, chaque banque et chaque opérateur fonctionnait un peu comme une île.
+
+7
+00:00:24,106 --> 00:00:27,261
+Pour passer d'une île à l'autre, il fallait faire des détours,
+
+8
+00:00:27,111 --> 00:00:29,539
+payer des frais, et parfois attendre longtemps.
+
+9
+00:00:29,839 --> 00:00:31,147
+Et chez le commerçant,
+
+10
+00:00:30,997 --> 00:00:34,567
+il y avait plusieurs QR codes sur le comptoir : un par opérateur.
+
+11
+00:00:35,917 --> 00:00:40,333
+PI-SPI, c'est la Plateforme Interopérable du Système de Paiement Instantané.
+
+12
+00:00:40,633 --> 00:00:44,961
+Interopérable, ça veut dire que tout le monde peut échanger avec tout le monde,
+
+13
+00:00:44,811 --> 00:00:47,235
+quelle que soit sa banque ou son opérateur.
+
+14
+00:00:47,535 --> 00:00:51,044
+Instantané, ça veut dire que l'argent arrive en quelques secondes.
+
+15
+00:00:51,344 --> 00:00:54,262
+Imaginez un grand pont qui relie tous les comptes entre eux.
+
+16
+00:00:54,562 --> 00:00:56,896
+Ce pont a été construit par la BCEAO,
+
+17
+00:00:56,746 --> 00:01:00,851
+la banque centrale des huit pays de l'UEMOA, dont la Côte d'Ivoire.
+
+18
+00:01:01,151 --> 00:01:05,269
+Il a été lancé officiellement le 30 septembre 2025.
+
+19
+00:01:06,619 --> 00:01:08,611
+Sur ce pont, on retrouve les banques,
+
+20
+00:01:08,911 --> 00:01:13,556
+les services de mobile money, comme Orange Money, MTN MoMo, Moov Money ou Wave,
+
+21
+00:01:13,856 --> 00:01:17,619
+les institutions de microfinance, et aussi le Trésor public.
+
+22
+00:01:17,919 --> 00:01:19,664
+Au 30 septembre 2026,
+
+23
+00:01:19,514 --> 00:01:25,437
+plus de 170 établissements étaient autorisés à proposer PI-SPI dans l'UEMOA.
+
+24
+00:01:26,787 --> 00:01:30,465
+Prenons un exemple. Awa habite à Abidjan, et elle a un compte Wave.
+
+25
+00:01:30,765 --> 00:01:34,271
+Elle veut envoyer 5 000 francs à son frère Koffi, à Bouaké.
+
+26
+00:01:34,121 --> 00:01:36,147
+Lui, il a un compte Orange Money.
+
+27
+00:01:36,447 --> 00:01:40,338
+Étape 1 : Awa ouvre son application et choisit d'envoyer de l'argent.
+
+28
+00:01:40,638 --> 00:01:44,345
+Étape 2 : elle tape le numéro de téléphone de Koffi, puis le montant.
+
+29
+00:01:44,645 --> 00:01:48,222
+Étape 3 : elle vérifie bien le nom du bénéficiaire et le montant.
+
+30
+00:01:48,522 --> 00:01:51,332
+Étape 4 : elle confirme avec son code secret.
+
+31
+00:01:51,632 --> 00:01:55,666
+Et en quelques secondes, Koffi reçoit l'argent sur son compte Orange Money.
+
+32
+00:01:55,516 --> 00:01:56,288
+C'est tout !
+
+33
+00:01:57,638 --> 00:02:00,188
+PI-SPI vous donne trois façons simples de payer.
+
+34
+00:02:00,488 --> 00:02:03,536
+Un : l'alias. Au lieu d'un long numéro de compte,
+
+35
+00:02:03,386 --> 00:02:07,615
+vous utilisez un identifiant simple, comme votre numéro de téléphone.
+
+36
+00:02:07,915 --> 00:02:09,495
+Deux : le QR code unique.
+
+37
+00:02:09,345 --> 00:02:13,612
+Le commerçant affiche un seul QR code, et tout le monde peut le scanner,
+
+38
+00:02:13,462 --> 00:02:16,071
+quelle que soit sa banque ou son opérateur.
+
+39
+00:02:16,371 --> 00:02:20,941
+Trois : la demande de paiement. Quelqu'un vous envoie une demande, vous la lisez,
+
+40
+00:02:20,791 --> 00:02:23,505
+puis vous acceptez ou vous refusez, en un clic.
+
+41
+00:02:24,855 --> 00:02:27,882
+Et ça marche tout le temps : 24 heures sur 24,
+
+42
+00:02:27,732 --> 00:02:31,133
+7 jours sur 7, même le dimanche et les jours fériés.
+
+43
+00:02:31,433 --> 00:02:35,883
+Et PI-SPI couvre les huit pays de l'UEMOA : le Bénin, le Burkina Faso,
+
+44
+00:02:35,733 --> 00:02:40,612
+la Côte d'Ivoire, la Guinée-Bissau, le Mali, le Niger, le Sénégal et le Togo.
+
+45
+00:02:41,962 --> 00:02:45,921
+Depuis le 2 novembre 2026, de nouvelles règles s'appliquent.
+
+46
+00:02:46,221 --> 00:02:48,742
+Les transferts entre opérateurs différents
+
+47
+00:02:48,592 --> 00:02:51,284
+passent désormais obligatoirement par PI-SPI.
+
+48
+00:02:51,584 --> 00:02:54,564
+Vos envois sont gratuits jusqu'à 8 000 francs par jour.
+
+49
+00:02:54,864 --> 00:03:00,228
+Au-delà, les frais sont plafonnés : pas plus de 0,8 % du montant, hors taxes.
+
+50
+00:03:00,078 --> 00:03:03,952
+Par exemple, pour 50 000 francs, au maximum 400 francs.
+
+51
+00:03:04,252 --> 00:03:07,461
+Et recevoir de l'argent, c'est gratuit, quel que soit le montant.
+
+52
+00:03:07,761 --> 00:03:08,892
+Autre changement :
+
+53
+00:03:08,742 --> 00:03:13,525
+un compte mobile money identifié peut maintenant garder jusqu'à 4 millions de francs,
+
+54
+00:03:13,375 --> 00:03:14,723
+au lieu de 2 millions.
+
+55
+00:03:15,023 --> 00:03:15,742
+Attention :
+
+56
+00:03:15,592 --> 00:03:19,621
+les retraits d'argent chez les agents ne sont pas concernés par ces règles.
+
+57
+00:03:20,971 --> 00:03:23,657
+Et pour les banques ivoiriennes, qu'est-ce que ça change ?
+
+58
+00:03:23,957 --> 00:03:26,081
+Avec un seul raccordement à PI-SPI,
+
+59
+00:03:25,931 --> 00:03:29,407
+une banque peut échanger avec tous les autres participants,
+
+60
+00:03:29,257 --> 00:03:31,662
+au lieu de signer des accords un par un.
+
+61
+00:03:31,962 --> 00:03:36,417
+Ses clients peuvent envoyer et recevoir de l'argent vers les comptes mobile money,
+
+62
+00:03:36,267 --> 00:03:37,205
+instantanément.
+
+63
+00:03:37,505 --> 00:03:40,103
+La banque peut proposer de nouveaux services :
+
+64
+00:03:39,953 --> 00:03:42,499
+le paiement chez les commerçants par QR code,
+
+65
+00:03:42,349 --> 00:03:45,639
+ou le paiement des salaires et des factures, en temps réel.
+
+66
+00:03:45,939 --> 00:03:48,432
+C'est aussi l'occasion de toucher les millions
+
+67
+00:03:48,282 --> 00:03:51,335
+d'Ivoiriens qui utilisent le mobile money tous les jours.
+
+68
+00:03:51,635 --> 00:03:55,423
+Et plus de paiements numériques, c'est moins d'espèces à transporter,
+
+69
+00:03:55,273 --> 00:03:57,479
+et plus de sécurité pour tout le monde.
+
+70
+00:03:58,829 --> 00:04:01,381
+Quelques conseils pour payer en toute sécurité.
+
+71
+00:04:01,681 --> 00:04:05,868
+Vérifiez toujours le nom du bénéficiaire et le montant avant de valider.
+
+72
+00:04:05,718 --> 00:04:08,279
+Un paiement instantané part tout de suite !
+
+73
+00:04:08,579 --> 00:04:11,583
+Ne donnez jamais votre code secret, à personne.
+
+74
+00:04:11,433 --> 00:04:15,955
+Ni votre opérateur, ni votre banque, ni la BCEAO ne vous le demanderont.
+
+75
+00:04:16,255 --> 00:04:20,587
+Et si vous recevez une demande de paiement que vous ne connaissez pas, refusez-la.
+
+76
+00:04:21,937 --> 00:04:23,499
+On résume ! PI-SPI, c'est :
+
+77
+00:04:23,799 --> 00:04:26,403
+Rapide : l'argent arrive en quelques secondes.
+
+78
+00:04:26,703 --> 00:04:29,760
+Ouvert : banques et mobile money échangent enfin entre eux.
+
+79
+00:04:30,060 --> 00:04:33,331
+Simple : un numéro de téléphone ou un QR code suffit.
+
+80
+00:04:33,631 --> 00:04:38,449
+Moins cher : envois gratuits jusqu'à 8 000 francs par jour, et réception gratuite.
+
+81
+00:04:38,749 --> 00:04:40,893
+Pour les détails et les frais exacts,
+
+82
+00:04:40,743 --> 00:04:44,181
+renseignez-vous auprès de votre banque ou de votre opérateur.
+
+83
+00:04:44,481 --> 00:04:48,315
+Partagez cette vidéo avec vos proches, pour que tout le monde en profite !
+
