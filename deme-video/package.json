@@ -1,0 +1,21 @@
+{
+  "name": "deme-video",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3-geo": "^3.1.1",
+    "gsap": "^3.12.5",
+    "lucide-static": "^0.460.0",
+    "qrcode": "^1.5.4",
+    "simple-icons": "^13.21.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}
