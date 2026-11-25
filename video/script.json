@@ -1,0 +1,127 @@
+{
+  "title": "PI-SPI expliqué simplement",
+  "updated": "25 novembre 2026",
+  "scenes": [
+    {
+      "id": "intro",
+      "chapter": "Intro",
+      "beats": [
+        "Vous êtes sur Wave, et votre ami est sur Orange Money ?",
+        "Vous voulez payer un commerçant, mais il n'a pas le même opérateur que vous ?",
+        "Ou vous voulez envoyer de l'argent de votre banque vers un compte mobile money ?",
+        "Bonne nouvelle : tout ça devient simple et rapide, grâce à PI-SPI.",
+        "En quelques minutes, on vous explique tout."
+      ]
+    },
+    {
+      "id": "avant",
+      "chapter": "Avant",
+      "beats": [
+        "Avant, chaque banque et chaque opérateur fonctionnait un peu comme une île.",
+        "Pour passer d'une île à l'autre, il fallait faire des détours, payer des frais, et parfois attendre longtemps.",
+        "Et chez le commerçant, il y avait plusieurs QR codes sur le comptoir : un par opérateur."
+      ]
+    },
+    {
+      "id": "definition",
+      "chapter": "C'est quoi ?",
+      "beats": [
+        "PI-SPI, c'est la Plateforme Interopérable du Système de Paiement Instantané.",
+        "Interopérable, ça veut dire que tout le monde peut échanger avec tout le monde, quelle que soit sa banque ou son opérateur.",
+        "Instantané, ça veut dire que l'argent arrive en quelques secondes.",
+        "Imaginez un grand pont qui relie tous les comptes entre eux.",
+        "Ce pont a été construit par la BCEAO, la banque centrale des huit pays de l'UEMOA, dont la Côte d'Ivoire.",
+        "Il a été lancé officiellement le 30 septembre 2025."
+      ]
+    },
+    {
+      "id": "qui",
+      "chapter": "Qui ?",
+      "beats": [
+        "Sur ce pont, on retrouve les banques,",
+        "les services de mobile money, comme Orange Money, MTN MoMo, Moov Money ou Wave,",
+        "les institutions de microfinance, et aussi le Trésor public.",
+        "Au 30 septembre 2026, plus de 170 établissements étaient autorisés à proposer PI-SPI dans l'UEMOA."
+      ]
+    },
+    {
+      "id": "exemple",
+      "chapter": "Exemple",
+      "beats": [
+        "Prenons un exemple. Awa habite à Abidjan, et elle a un compte Wave.",
+        "Elle veut envoyer 5 000 francs à son frère Koffi, à Bouaké. Lui, il a un compte Orange Money.",
+        "Étape 1 : Awa ouvre son application et choisit d'envoyer de l'argent.",
+        "Étape 2 : elle tape le numéro de téléphone de Koffi, puis le montant.",
+        "Étape 3 : elle vérifie bien le nom du bénéficiaire et le montant.",
+        "Étape 4 : elle confirme avec son code secret.",
+        "Et en quelques secondes, Koffi reçoit l'argent sur son compte Orange Money. C'est tout !"
+      ]
+    },
+    {
+      "id": "outils",
+      "chapter": "3 façons",
+      "beats": [
+        "PI-SPI vous donne trois façons simples de payer.",
+        "Un : l'alias. Au lieu d'un long numéro de compte, vous utilisez un identifiant simple, comme votre numéro de téléphone.",
+        "Deux : le QR code unique. Le commerçant affiche un seul QR code, et tout le monde peut le scanner, quelle que soit sa banque ou son opérateur.",
+        "Trois : la demande de paiement. Quelqu'un vous envoie une demande, vous la lisez, puis vous acceptez ou vous refusez, en un clic."
+      ]
+    },
+    {
+      "id": "toujours",
+      "chapter": "24h/24",
+      "beats": [
+        "Et ça marche tout le temps : 24 heures sur 24, 7 jours sur 7, même le dimanche et les jours fériés.",
+        "Et PI-SPI couvre les huit pays de l'UEMOA : le Bénin, le Burkina Faso, la Côte d'Ivoire, la Guinée-Bissau, le Mali, le Niger, le Sénégal et le Togo."
+      ]
+    },
+    {
+      "id": "regles",
+      "chapter": "Nouvelles règles",
+      "beats": [
+        "Depuis le 2 novembre 2026, de nouvelles règles s'appliquent.",
+        "Les transferts entre opérateurs différents passent désormais obligatoirement par PI-SPI.",
+        "Vos envois sont gratuits jusqu'à 8 000 francs par jour.",
+        "Au-delà, les frais sont plafonnés : pas plus de 0,8 % du montant, hors taxes. Par exemple, pour 50 000 francs, au maximum 400 francs.",
+        "Et recevoir de l'argent, c'est gratuit, quel que soit le montant.",
+        "Autre changement : un compte mobile money identifié peut maintenant garder jusqu'à 4 millions de francs, au lieu de 2 millions.",
+        "Attention : les retraits d'argent chez les agents ne sont pas concernés par ces règles."
+      ]
+    },
+    {
+      "id": "banques",
+      "chapter": "Banques",
+      "beats": [
+        "Et pour les banques ivoiriennes, qu'est-ce que ça change ?",
+        "Avec un seul raccordement à PI-SPI, une banque peut échanger avec tous les autres participants, au lieu de signer des accords un par un.",
+        "Ses clients peuvent envoyer et recevoir de l'argent vers les comptes mobile money, instantanément.",
+        "La banque peut proposer de nouveaux services : le paiement chez les commerçants par QR code, ou le paiement des salaires et des factures, en temps réel.",
+        "C'est aussi l'occasion de toucher les millions d'Ivoiriens qui utilisent le mobile money tous les jours.",
+        "Et plus de paiements numériques, c'est moins d'espèces à transporter, et plus de sécurité pour tout le monde."
+      ]
+    },
+    {
+      "id": "securite",
+      "chapter": "Sécurité",
+      "beats": [
+        "Quelques conseils pour payer en toute sécurité.",
+        "Vérifiez toujours le nom du bénéficiaire et le montant avant de valider. Un paiement instantané part tout de suite !",
+        "Ne donnez jamais votre code secret, à personne. Ni votre opérateur, ni votre banque, ni la BCEAO ne vous le demanderont.",
+        "Et si vous recevez une demande de paiement que vous ne connaissez pas, refusez-la."
+      ]
+    },
+    {
+      "id": "recap",
+      "chapter": "Résumé",
+      "beats": [
+        "On résume ! PI-SPI, c'est :",
+        "Rapide : l'argent arrive en quelques secondes.",
+        "Ouvert : banques et mobile money échangent enfin entre eux.",
+        "Simple : un numéro de téléphone ou un QR code suffit.",
+        "Moins cher : envois gratuits jusqu'à 8 000 francs par jour, et réception gratuite.",
+        "Pour les détails et les frais exacts, renseignez-vous auprès de votre banque ou de votre opérateur.",
+        "Partagez cette vidéo avec vos proches, pour que tout le monde en profite !"
+      ]
+    }
+  ]
+}
