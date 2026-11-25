@@ -1,6 +1,6 @@
 # DEME TRADING COMPANY — Vidéo motion design
 
-Vidéo promotionnelle 16:9 (1920×1080, 40 s, avec musique originale) :
+Vidéo promotionnelle 16:9 (1920×1080, 40 s) avec logo officiel, voix off et musique originale :
 
 - `DEME_Trading_Company.mp4` — la vidéo finale
 - `apercu.jpg` — miniature / affiche
@@ -20,8 +20,10 @@ Vidéo promotionnelle 16:9 (1920×1080, 40 s, avec musique originale) :
 
 ```bash
 npm install                 # gsap, d3-geo, icônes, qrcode…
-node build-assets.mjs       # icônes, QR WhatsApp, points du globe -> assets.js
-python3 music.py music.wav  # bande-son (numpy + scipy)
+python3 vectorize-logo.py   # logo officiel (src/logo-original.jpg) -> logo-paths.json (pip: potracer, pillow)
+node build-assets.mjs       # icônes, QR WhatsApp, points du globe, logo -> assets.js
+python3 music.py music.wav  # musique (numpy + scipy)
+python3 mix.py              # voix off (src/voix-off.mp3) calée par phrase + musique baissée -> bande-son.wav (pip: pyloudnorm)
 node render.mjs 30 4        # rendu (Playwright + ffmpeg) -> DEME_Trading_Company.mp4
 ```
 

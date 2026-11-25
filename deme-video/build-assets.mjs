@@ -24,6 +24,7 @@ for (let lat = -58; lat <= 80; lat += step) {
     if (geoContains(land, [lon, lat])) dots.push([+lon.toFixed(2), +lat.toFixed(2)]);
   }
 }
+const LOGO = JSON.parse(fs.readFileSync('logo-paths.json', 'utf8'));
 fs.writeFileSync('assets.js',
-  `window.ICONS=${JSON.stringify(ICONS)};\nwindow.WA_PATH=${JSON.stringify(wa)};\nwindow.QR_SVG=${JSON.stringify(qr)};\nwindow.LAND_DOTS=${JSON.stringify(dots)};\n`);
+  `window.LOGO=${JSON.stringify(LOGO)};\nwindow.ICONS=${JSON.stringify(ICONS)};\nwindow.WA_PATH=${JSON.stringify(wa)};\nwindow.QR_SVG=${JSON.stringify(qr)};\nwindow.LAND_DOTS=${JSON.stringify(dots)};\n`);
 console.log('icons', Object.keys(ICONS).length, 'dots', dots.length);

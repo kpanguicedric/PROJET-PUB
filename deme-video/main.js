@@ -11,19 +11,39 @@ function iconSVG(name, draw) {
   if (draw) inner = inner.replace(/<(path|circle|rect|line|polyline|polygon|ellipse)/g, '<$1 pathLength="1"');
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
 }
-function emblemSVG(id, text = true) {
-  return `<svg viewBox="0 0 200 200">
+/* Logo officiel : formes orange + texte vectorisés depuis le fichier fourni, bleus reconstruits en cercles exacts */
+function annulus(cx, cy, ro, ri, a0, a1) {
+  const P = (r, a) => `${(cx + r * Math.cos(a * Math.PI / 180)).toFixed(2)} ${(cy + r * Math.sin(a * Math.PI / 180)).toFixed(2)}`;
+  return `M${P(ro, a0)} A${ro} ${ro} 0 0 1 ${P(ro, a1)} L${P(ri, a1)} A${ri} ${ri} 0 0 0 ${P(ri, a0)} Z`;
+}
+const RING = annulus(569.5, 551.8, 170, 125, 122, 268);
+function emblemSVG(id) {
+  const L = LOGO;
+  return `<svg viewBox="373 280 440 440">
   <defs>
-    <linearGradient id="${id}bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1F57DA"/><stop offset="1" stop-color="#071a55"/></linearGradient>
-    <linearGradient id="${id}or" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FF7A00"/><stop offset="1" stop-color="#FFB13B"/></linearGradient>
+    <linearGradient id="${id}o" gradientUnits="userSpaceOnUse" x1="420" y1="680" x2="800" y2="330"><stop offset="0" stop-color="#C25E1C"/><stop offset=".55" stop-color="#F08A1C"/><stop offset="1" stop-color="#F8A43E"/></linearGradient>
+    <linearGradient id="${id}r" gradientUnits="userSpaceOnUse" x1="580" y1="380" x2="470" y2="700"><stop offset="0" stop-color="#2F5A9A" stop-opacity=".35"/><stop offset=".3" stop-color="#3A64A3"/><stop offset=".75" stop-color="#2B4F88"/><stop offset="1" stop-color="#1E3A66" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="${id}d" gradientUnits="userSpaceOnUse" x1="660" y1="625" x2="535" y2="490"><stop offset="0" stop-color="#3A66A6"/><stop offset=".55" stop-color="#2E548E" stop-opacity=".95"/><stop offset="1" stop-color="#2E548E" stop-opacity=".12"/></linearGradient>
+    <mask id="${id}k" maskUnits="userSpaceOnUse" x="300" y="250" width="600" height="520">
+      <rect x="300" y="250" width="600" height="520" fill="#fff"/>
+      <path class="e-arrow" d="${L.arrow}" fill="#000" stroke="#000" stroke-width="16" stroke-linejoin="round"/>
+      <path class="e-arcT" d="${L.arcTop}" fill="#000" stroke="#000" stroke-width="12"/>
+      <path class="e-arcB" d="${L.arcBot}" fill="#000" stroke="#000" stroke-width="12"/>
+    </mask>
   </defs>
-  <rect class="e-bg" width="200" height="200" rx="36" fill="url(#${id}bg)"/>
-  <rect x="2" y="2" width="196" height="196" rx="34" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="2"/>
-  <path class="e-blue" d="M58.4 114 A48 48 0 0 1 141.6 66" fill="none" stroke="#6E9DFF" stroke-width="13" stroke-linecap="round" pathLength="1"/>
-  <path class="e-or" d="M44 128 C 82 154, 132 140, 156 84" fill="none" stroke="url(#${id}or)" stroke-width="15" stroke-linecap="round" pathLength="1"/>
-  <polygon class="e-arrow" points="165,62 168,92 142,80" fill="#FFB13B" stroke="#FFB13B" stroke-width="3" stroke-linejoin="round"/>
-  ${text ? '<text class="e-txt" x="100" y="182" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="34" letter-spacing="1" fill="#fff">DEME</text>' : ''}
+  <g mask="url(#${id}k)">
+    <path class="e-ring" d="${RING}" fill="url(#${id}r)"/>
+    <circle class="e-disc" cx="595.6" cy="558.2" r="76" fill="url(#${id}d)"/>
+  </g>
+  <path class="e-arcT" d="${L.arcTop}" fill="url(#${id}o)"/>
+  <path class="e-arcB" d="${L.arcBot}" fill="url(#${id}o)"/>
+  <path class="e-arrow" d="${L.arrow}" fill="url(#${id}o)"/>
 </svg>`;
+}
+function wordSVG(part, fill) {
+  const vb = part === 'deme' ? '322 780 562 118' : part === 'tc' ? '322 908 562 40' : '322 780 562 168';
+  const body = part === 'both' ? `<path d="${LOGO.deme}" fill="${fill[0]}"/><path d="${LOGO.tc}" fill="${fill[1]}"/>` : `<path d="${LOGO[part]}" fill="${fill}"/>`;
+  return `<svg viewBox="${vb}">${body}</svg>`;
 }
 function splitWords(el) {
   const out = [];
@@ -53,6 +73,9 @@ $$('[data-i]').forEach(el => {
 $$('.split').forEach(splitWords);
 $('#emblemWrap').innerHTML = emblemSVG('big');
 $$('.emb').forEach((el, i) => el.innerHTML = emblemSVG('m' + i));
+$$('.wm').forEach(el => el.innerHTML = wordSVG('both', ['#0A1F5C', '#F08A1C']));
+$('#wordmark .deme').innerHTML = `<svg viewBox="322 780 562 118"><defs><linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="-400" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#0A1F5C"/><stop offset=".45" stop-color="#0A1F5C"/><stop offset=".5" stop-color="#8DB4FF"/><stop offset=".55" stop-color="#0A1F5C"/><stop offset="1" stop-color="#0A1F5C"/></linearGradient></defs><path d="${LOGO.deme}" fill="url(#shine)"/></svg>`;
+$('#wordmark .tc').innerHTML = wordSVG('tc', '#F08A1C');
 $('#waP').setAttribute('d', WA_PATH);
 $('.waq').setAttribute('d', WA_PATH);
 $('.qrsvg').innerHTML = QR_SVG.replace('<svg', '<svg class="qr" shape-rendering="crispEdges"');
@@ -91,37 +114,41 @@ tl.fromTo('#s1 .cam', { scale: 1.0 }, { scale: 1.07, duration: 4.1, ease: 'none'
 tl.fromTo(FX, { a: 0 }, { a: 1, duration: 1.2, ease: 'power1.out' }, 0);
 words('#s1 .lineA', .25, .08, .9);
 tl.to('#s1 .ulA', { scaleX: 1, duration: .6, ease: 'expo.out' }, .95);
-tl.to('#s1 .lineA .wi', { yPercent: -115, duration: .4, stagger: .03, ease: 'power3.in' }, 1.6);
-tl.to('#s1 .ulA', { scaleX: 0, transformOrigin: '100% 50%', duration: .35, ease: 'power3.in' }, 1.62);
-tl.fromTo('#s1 .kick', { opacity: 0, y: 20, letterSpacing: '22px' }, { opacity: 1, y: 0, letterSpacing: '10px', duration: .7 }, 1.85);
+tl.to('#s1 .lineA .wi', { yPercent: -115, duration: .35, stagger: .025, ease: 'power3.in' }, 1.38);
+tl.to('#s1 .ulA', { scaleX: 0, transformOrigin: '100% 50%', duration: .35, ease: 'power3.in' }, 1.4);
+tl.fromTo('#s1 .kick', { opacity: 0, y: 20, letterSpacing: '22px' }, { opacity: 1, y: 0, letterSpacing: '10px', duration: .7 }, 1.45);
 ['Simple', 'Rapide', 'Sécurisé'].forEach((_, i) => {
-  tl.fromTo(`#s1 .lineB span:nth-child(${i + 1})`, { opacity: 0, scale: 2.4, filter: 'blur(24px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: .42, ease: 'expo.out', immediateRender: true }, 2.0 + i * .5);
+  tl.fromTo(`#s1 .lineB span:nth-child(${i + 1})`, { opacity: 0, scale: 2.4, filter: 'blur(24px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: .42, ease: 'expo.out', immediateRender: true }, [1.75, 2.45, 3.18][i]);
 });
-tl.to('#s1 .lineB', { scale: .9, opacity: 0, filter: 'blur(12px)', duration: .3, ease: 'power3.in' }, 3.42);
+tl.to('#s1 .lineB', { scale: .9, opacity: 0, filter: 'blur(12px)', duration: .3, ease: 'power3.in' }, 3.5);
 tl.to('#s1 .kick', { opacity: 0, duration: .3 }, 3.5);
-tl.fromTo('#ring1', { scale: 0 }, { scale: 26, duration: .55, ease: 'power3.in', immediateRender: true }, 3.42);
+tl.fromTo('#ring1', { scale: 0 }, { scale: 26, duration: .55, ease: 'power3.in', immediateRender: true }, 3.47);
 
 tl.to('#vignette', { opacity: .35, duration: .4 }, 3.7);
 /* ===== S2 — LOGO (3.7 → 7.95) ===== */
 show('#s2', 3.6, 7.97);
-tl.fromTo('#s2', { clipPath: 'circle(0% at 50% 50%)' }, { clipPath: 'circle(80% at 50% 50%)', duration: .5, ease: 'power3.in', immediateRender: true }, 3.62);
+tl.fromTo('#s2', { clipPath: 'circle(0% at 50% 50%)' }, { clipPath: 'circle(80% at 50% 50%)', duration: .45, ease: 'power3.in', immediateRender: true }, 3.7);
 tl.to(FX, { a: 0, duration: .3 }, 3.8);
 tl.fromTo('#s2 .cam', { scale: 1.06 }, { scale: 1.0, duration: 4.2, ease: 'power2.out' }, 3.8);
 $$('#s2 .shock').forEach((s, i) => tl.fromTo(s, { scale: .3, opacity: .9 }, { scale: 3.2, opacity: 0, duration: 1.6, ease: 'expo.out', immediateRender: true }, 4.0 + i * .18));
-tl.fromTo('#emblemWrap', { scale: 0, rotate: -25 }, { scale: 1, rotate: 0, duration: .9, ease: 'back.out(1.8)', immediateRender: true }, 3.95);
+const EW = '#emblemWrap ';
+gsap.set(EW + '.e-ring', { svgOrigin: '569.5 551.8' });
+gsap.set(EW + '.e-disc', { svgOrigin: '595.6 558.2' });
+gsap.set(EW + '.e-arcT, ' + EW + '.e-arcB', { svgOrigin: '593 500' });
+tl.fromTo('#emblemWrap', { scale: .55, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.0, ease: 'expo.out', immediateRender: true }, 3.95);
+tl.fromTo(EW + '.e-ring', { rotation: -140, opacity: 0 }, { rotation: 0, opacity: 1, duration: 1.0, ease: 'expo.out', immediateRender: true }, 4.0);
+tl.fromTo(EW + '.e-disc', { scale: 0 }, { scale: 1, duration: .7, ease: 'back.out(2)', immediateRender: true }, 4.15);
+tl.fromTo(EW + '.e-arcT', { rotation: 110, opacity: 0 }, { rotation: 0, opacity: 1, duration: 1.0, ease: 'expo.out', immediateRender: true }, 4.12);
+tl.fromTo(EW + '.e-arcB', { rotation: 110, opacity: 0 }, { rotation: 0, opacity: 1, duration: 1.0, ease: 'expo.out', immediateRender: true }, 4.24);
+tl.fromTo(EW + '.e-arrow', { x: -150, y: 110, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: .55, ease: 'back.out(1.6)', immediateRender: true }, 4.6);
 tl.fromTo('#emblemShadow', { opacity: 0, scale: .3 }, { opacity: 1, scale: 1, duration: .8, immediateRender: true }, 4.1);
-draw('#emblemWrap .e-blue', 4.15, .75);
-draw('#emblemWrap .e-or', 4.35, .7);
-tl.fromTo('#emblemWrap .e-arrow', { scale: 0, transformOrigin: '50% 60%', x: -16, y: 16 }, { scale: 1, x: 0, y: 0, duration: .5, ease: 'back.out(3)', immediateRender: true }, 4.9);
-tl.fromTo('#emblemWrap .e-txt', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .5, immediateRender: true }, 4.95);
-tl.to('#emblemWrap', { x: -440, y: 6, scale: .92, duration: .9, ease: 'power3.inOut' }, 5.35);
-tl.to('#emblemShadow', { x: -440, opacity: .7, duration: .9, ease: 'power3.inOut' }, 5.35);
-tl.set('#wordmark', { x: -110 }, 0);
-tl.fromTo('#wordmark .deme span', { yPercent: 110, opacity: 0, rotateX: -70 }, { yPercent: 0, opacity: 1, rotateX: 0, duration: .8, stagger: .07, ease: 'expo.out', immediateRender: true }, 5.6);
-tl.fromTo('#wordmark .tc', { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: .8, ease: 'power3.inOut', immediateRender: true }, 5.95);
+tl.to('#emblemShadow', { opacity: 0, duration: .4 }, 5.3);
+tl.to('#emblemWrap', { y: -130, scale: .74, duration: .9, ease: 'power3.inOut' }, 5.35);
+tl.fromTo('#wordmark .deme', { clipPath: 'inset(0 0 100% 0)', y: 50 }, { clipPath: 'inset(0 0 0% 0)', y: 0, duration: .8, ease: 'expo.out', immediateRender: true }, 5.6);
+tl.fromTo('#wordmark .tc', { clipPath: 'inset(0 50% 0 50%)' }, { clipPath: 'inset(0 0% 0 0%)', duration: .8, ease: 'power3.inOut', immediateRender: true }, 5.95);
 tl.to('#wordmark .bar', { scaleX: 1, duration: .9, ease: 'expo.out' }, 6.2);
 tl.fromTo('#wordmark .svcs', { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: .7, immediateRender: true }, 6.45);
-tl.fromTo('#wordmark .deme span', { backgroundPosition: '100% 0' }, { backgroundPosition: '0% 0', duration: .9, stagger: .09, ease: 'power2.inOut', immediateRender: true }, 6.55);
+tl.fromTo('#shine', { attr: { x1: -100, x2: 300 } }, { attr: { x1: 900, x2: 1300 }, duration: 1.1, ease: 'power2.inOut', immediateRender: true }, 6.5);
 tl.fromTo('#s2 .waves', { y: 280 }, { y: 0, duration: 1.1, ease: 'expo.out', immediateRender: true }, 4.2);
 draw('#s2 .wv3', 4.5, 1.4);
 
@@ -252,7 +279,7 @@ $$('#s6 .ct').forEach((el, i) => {
 });
 tl.fromTo('#s6 .qrc', { opacity: 0, y: 80, rotateY: 35, transformPerspective: 1400 }, { opacity: 1, y: 0, rotateY: 0, duration: 1.1, ease: 'expo.out', immediateRender: true }, 32.7);
 tl.fromTo('#s6 .cor', { scale: 1.4, opacity: 0 }, { scale: 1, opacity: 1, duration: .5, stagger: .06, ease: 'back.out(2)', immediateRender: true }, 33.3);
-tl.fromTo('#s6 .tag', { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: 1.5, ease: 'power1.inOut', immediateRender: true }, 34.0);
+tl.fromTo('#s6 .tag', { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: 1.4, ease: 'power1.inOut', immediateRender: true }, 36.1);
 tl.fromTo('#s6 .qrc', { y: 0 }, { y: -12, duration: 3, yoyo: true, repeat: 1, ease: 'sine.inOut', immediateRender: false }, 33.8);
 tl.to('#fade', { opacity: 1, duration: .5, ease: 'power1.in' }, 39.5);
 tl.set({}, {}, DURATION);

@@ -301,7 +301,7 @@ def slam():
 
 
 # accroche
-for t in (2.0, 2.5, 3.0):
+for t in (1.75, 2.45, 3.18):
     place(fx, slam(), t, 0.55)
 place(fx, riser(1.9), 2.1, 0.22)
 place(fx, whoosh(0.7), 3.35, 0.35)

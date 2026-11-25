@@ -39,7 +39,7 @@ async function worker(k) {
 const segs = await Promise.all(Array.from({ length: W }, (_, k) => worker(k)));
 await browser.close();
 fs.writeFileSync(path.join(tmp, 'list.txt'), segs.map(s => `file '${s}'`).join('\n'));
-execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', path.join(tmp, 'list.txt'), '-i', 'music.wav',
+execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', path.join(tmp, 'list.txt'), '-i', 'bande-son.wav',
   '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '256k', '-af', 'loudnorm=I=-14:TP=-1:LRA=11', '-ar', '48000',
   '-shortest', '-movflags', '+faststart', OUT], { stdio: 'inherit' });
 fs.rmSync(tmp, { recursive: true, force: true });
